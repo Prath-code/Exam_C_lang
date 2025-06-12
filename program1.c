@@ -1,17 +1,23 @@
 #include <stdio.h>
 #include <ctype.h>
+#include <string.h>
 
-// Create a C program to check if a number is entered by the user is a porositive or consonant using a switch statement
-void main()
+// Create a C program to check if a number is entered by the user is a porositive or constant using a switch statement
+
+int main()
 {
-    char letter;
+    char input[10], letter;
 
     printf("Enter a single letter: ");
-    if (scanf(" %c", &letter) != 1 || !isalpha(letter))
+    fgets(input, sizeof(input), stdin);
+
+    if (strlen(input) > 2 || !isalpha(input[0]) || input[1] != '\n')
     {
         printf("Error: Input must be a single valid alphabet letter.\n");
-        return;
+        return 1;
     }
+
+    letter = input[0];
 
     switch (letter)
     {
@@ -31,4 +37,6 @@ void main()
         printf("You entered a consonant.\n");
         break;
     }
+
+    return 0;
 }
