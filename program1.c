@@ -2,7 +2,7 @@
 #include <ctype.h>
 #include <string.h>
 
-// Create a C program to check if a number is entered by the user is a porositive or constant using a switch statement
+// Create a C program to check if a letter is entered by the user is a porositive or constant using a switch statement
 
 int main()
 {
